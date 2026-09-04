@@ -339,9 +339,14 @@ def send_inquiry_email(inquiry):
 # DATABASE CONFIGURATION
 # =========================================
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///gatishiksha.db"
+db_url = os.getenv("DATABASE_URL", "sqlite:///gatishiksha.db")
+# Convert legacy 'postgres://' to 'postgresql://' for SQLAlchemy compatibility
+if db_url and db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql://", 1)
 
+app.config["SQLALCHEMY_DATABASE_URI"] = db_url
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
 
 
 # =========================================
