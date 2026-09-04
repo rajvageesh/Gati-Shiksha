@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Login | Gati Shiksha</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body class="admin-page">
+
+    <div class="admin-login-container">
+
+        <div class="admin-login-box">
+
+            <div class="section-label">
+                GATI SHIKSHA
+            </div>
+
+            <h1>
+                Admin Login
+            </h1>
+
+            <p class="admin-login-description">
+                Sign in to view and manage inquiries.
+            </p>
+
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+
+                {% if messages %}
+
+                    <div class="admin-messages">
+
+                        {% for category, message in messages %}
+
+                            <div class="admin-message">
+                                {{ message }}
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                {% endif %}
+
+            {% endwith %}
+
+
+            <form
+                action="{{ url_for('admin_login') }}"
+                method="POST"
+                class="admin-login-form"
+            >
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                <div class="form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="inquiry-submit"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <a
+                href="{{ url_for('home') }}"
+                class="admin-back-link"
+            >
+                ← Back to website
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

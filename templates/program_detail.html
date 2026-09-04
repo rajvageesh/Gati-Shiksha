@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ program.title }} | Gati Shiksha
+{% endblock %}
+
+{% block content %}
+
+<section class="program-detail">
+
+    <div class="container-custom">
+
+        <!-- Back -->
+
+        <a href="{{ url_for('home') }}#programs"
+           class="program-back">
+            ← Back to Programs
+        </a>
+
+
+        <!-- Header -->
+
+        <div class="program-detail-header">
+
+            <div class="section-label">
+                {{ program.category }}
+            </div>
+
+            <h1>
+                {{ program.title }}
+            </h1>
+
+            <p class="program-detail-description">
+                {{ program.description }}
+            </p>
+
+        </div>
+
+
+        <!-- Information -->
+
+        <div class="program-detail-meta">
+
+            <div>
+                <span class="meta-label">
+                    CATEGORY
+                </span>
+
+                <span class="meta-value">
+                    {{ program.category }}
+                </span>
+            </div>
+
+
+            {% if program.duration %}
+
+            <div>
+                <span class="meta-label">
+                    DURATION
+                </span>
+
+                <span class="meta-value">
+                    {{ program.duration }}
+                </span>
+            </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- Main Content -->
+
+        <div class="program-detail-content">
+
+            <div>
+
+                <div class="section-label">
+                    ABOUT THE PROGRAM
+                </div>
+
+                <h2>
+                    Learning through
+                    experience.
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    This program is designed to provide
+                    learners with practical exposure to
+                    emerging technologies and hands-on
+                    learning experiences.
+                </p>
+
+                <p>
+                    Participants explore concepts through
+                    experimentation, building and
+                    problem-solving.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CTA -->
+
+        <div class="program-detail-cta">
+
+            <div>
+
+                <div class="section-label">
+                    INTERESTED IN THIS PROGRAM?
+                </div>
+
+                <h2>
+                    Let's start a conversation.
+                </h2>
+
+            </div>
+
+            <a href="{{ url_for('home') }}#contact"
+               class="program-cta-button">
+
+                Enquire About This Program
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

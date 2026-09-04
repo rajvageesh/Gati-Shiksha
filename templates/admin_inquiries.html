@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Admin Inquiries | Gati Shiksha
+    </title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body class="admin-page">
+
+    <div class="admin-dashboard">
+
+
+        <!-- =====================================
+             HEADER
+             ===================================== -->
+
+        <div class="admin-dashboard-header">
+
+            <div>
+
+                <div class="section-label">
+                    GATI SHIKSHA
+                </div>
+
+                <h1>
+                    Inquiries
+                </h1>
+
+                <p>
+                    View enquiries submitted through
+                    the website.
+                </p>
+
+            </div>
+
+
+            <div class="admin-actions">
+
+                <a href="{{ url_for('home') }}" class="admin-secondary-button">
+                    View Website
+                </a>
+
+                <a href="{{ url_for('admin_logout') }}" class="admin-secondary-button">
+                    Logout
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             COUNT
+             ===================================== -->
+
+        <div class="inquiry-count">
+
+            {{ inquiries|length }}
+
+            {% if inquiries|length == 1 %}
+            inquiry
+            {% else %}
+            inquiries
+            {% endif %}
+
+        </div>
+
+
+        <!-- =====================================
+             INQUIRIES
+             ===================================== -->
+
+        {% if inquiries %}
+
+        <div class="admin-inquiry-list">
+
+
+            {% for inquiry in inquiries %}
+
+            <article class="admin-inquiry-card">
+
+
+                <!-- NUMBER -->
+
+                <div class="admin-inquiry-number">
+
+                    {{ "%02d"|format(loop.index) }}
+
+                </div>
+
+
+                <!-- CONTENT -->
+
+                <div class="admin-inquiry-content">
+
+
+                    <!-- NAME -->
+
+                    <h2>
+                        {{ inquiry.name }}
+                    </h2>
+
+
+                    <!-- BASIC INFORMATION -->
+
+                    <div class="admin-inquiry-meta">
+
+                        <span>
+                            {{ inquiry.email }}
+                        </span>
+
+                        <span>
+                            {{ inquiry.role }}
+                        </span>
+
+                        {% if inquiry.organisation %}
+
+                        <span>
+                            {{ inquiry.organisation }}
+                        </span>
+
+                        {% endif %}
+
+                    </div>
+
+
+                    <!-- =================================
+                         PROGRAM
+                         ================================= -->
+
+                    {% if inquiry.program %}
+
+                    <div class="admin-interest">
+
+                        <span class="admin-interest-label">
+                            PROGRAM
+                        </span>
+
+                        <strong>
+                            {{ inquiry.program }}
+                        </strong>
+
+                    </div>
+
+                    {% else %}
+
+                    <div class="admin-interest admin-interest-empty">
+
+                        <span class="admin-interest-label">
+                            INTEREST
+                        </span>
+
+                        <span>
+                            General inquiry
+                        </span>
+
+                    </div>
+
+                    {% endif %}
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="admin-message">
+
+                        <span class="admin-message-label">
+                            MESSAGE
+                        </span>
+
+                        <p>
+                            {{ inquiry.message }}
+                        </p>
+
+                    </div>
+
+
+                    <!-- DATE -->
+
+                    <div class="admin-inquiry-date">
+
+                        Submitted:
+                        {{ inquiry.created_at.strftime('%d %b %Y, %I:%M %p') }}
+
+                    </div>
+                    <!-- STATUS -->
+
+                    <div class="admin-inquiry-status">
+
+                        <span class="admin-message-label">
+                            STATUS
+                        </span>
+
+                        <form action="{{ url_for('update_inquiry_status', inquiry_id=inquiry.id) }}" method="POST"
+                            class="status-form">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                            <select name="status" onchange="this.form.submit()"
+                                class="inquiry-status-select status-{{ inquiry.status|lower|replace(' ', '-') }}">
+
+                                <option value="New" {% if inquiry.status=="New" %}selected{% endif %}>
+                                    New
+                                </option>
+
+                                <option value="Contacted" {% if inquiry.status=="Contacted" %}selected{% endif %}>
+                                    Contacted
+                                </option>
+
+                                <option value="In Progress" {% if inquiry.status=="In Progress" %}selected{% endif %}>
+                                    In Progress
+                                </option>
+
+                                <option value="Closed" {% if inquiry.status=="Closed" %}selected{% endif %}>
+                                    Closed
+                                </option>
+
+                            </select>
+
+                        </form>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+            {% endfor %}
+
+
+        </div>
+
+
+        {% else %}
+
+
+        <!-- =====================================
+             EMPTY STATE
+             ===================================== -->
+
+        <div class="no-inquiries">
+
+            <h2>
+                No inquiries yet.
+            </h2>
+
+            <p>
+                Submitted inquiries will appear here.
+            </p>
+
+        </div>
+
+        {% endif %}
+
+
+    </div>
+
+</body>
+
+</html>

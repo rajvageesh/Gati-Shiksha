@@ -1,0 +1,1606 @@
+{% extends "base.html" %}
+
+{% block title %}
+Gati Shiksha | STEM & Future-Ready Education
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<!-- =========================================
+     GATI SHIKSHA MAIN IMAGE
+     ========================================= -->
+
+<section class="gati-image-section">
+
+    <div class="container-custom">
+
+        <div class="gati-main-image-wrapper">
+
+            <img src="{{ url_for('static', filename='images/hero/main gati.png') }}"
+                alt="Gati Shiksha - Building future-ready learning through STEM, technology and innovation"
+                class="gati-main-image">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     OPENING SECTION
+     ========================================= -->
+
+<section class="gati-opening" id="home">
+
+    <div class="container-custom">
+
+        <!-- Top Introduction -->
+
+        <div class="opening-intro">
+
+            <div class="section-label">
+                GATI SHIKSHA
+            </div>
+
+            <h1 class="opening-title">
+                Building future-ready learning
+                through STEM, technology
+                and innovation.
+            </h1>
+
+            <p class="opening-description">
+                Empowering students and educators through
+                hands-on learning, emerging technologies,
+                and future-focused education aligned with
+                the needs of the 21st century.
+            </p>
+
+        </div>
+
+
+        <!-- INFORMATION ROW -->
+
+        <div class="opening-meta">
+
+            <div class="opening-meta-item">
+
+                <span class="meta-label">
+                    FOCUS
+                </span>
+
+                <span class="meta-value">
+                    STEM · Innovation · Future Skills
+                </span>
+
+            </div>
+
+
+            <div class="opening-meta-item">
+
+                <span class="meta-label">
+                    APPROACH
+                </span>
+
+                <span class="meta-value">
+                    Hands-on & Experiential Learning
+                </span>
+
+            </div>
+
+
+            <div class="opening-meta-item">
+
+                <span class="meta-label">
+                    SUPPORT
+                </span>
+
+                <span class="meta-value">
+                    MNNIT Prayagraj
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     PARTNER / INITIATIVE LOGOS
+     ========================================= -->
+
+<section class="partner-logos-section">
+
+    <div class="container-custom">
+
+        <div class="partner-logos">
+
+            <div class="partner-logo">
+
+                <img src="{{ url_for('static', filename='images/hero/startup.png') }}" alt="START IN UP">
+
+            </div>
+
+            <div class="partner-logo">
+
+                <img src="{{ url_for('static', filename='images/hero/startindia.png') }}" alt="#startupindia">
+
+            </div>
+
+            <div class="partner-logo">
+
+                <img src="{{ url_for('static', filename='images/hero/mnnit.png') }}"
+                    alt="MNNIT Innovation & Incubation Hub">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CORE SERVICES
+     ========================================= -->
+
+<section class="services-section" id="services">
+
+    <div class="container-custom">
+
+        <!-- Section Header -->
+
+        <div class="services-header">
+
+            <div>
+                <div class="section-label">
+                    CORE SERVICES
+                </div>
+
+                <h2 class="services-title">
+                    What we build,
+                    teach and enable.
+                </h2>
+            </div>
+
+
+
+            <p class="services-intro">
+                Gati Shiksha brings STEM education, teacher
+                enablement and digital innovation together
+                to create practical learning ecosystems.
+            </p>
+
+        </div>
+
+
+        <!-- Services List — scroll wrapper with fade edge indicator -->
+        <div class="services-scroll-wrapper" role="region" aria-label="Core services — scroll to see more">
+            <div class="services-list" id="servicesList">
+
+                <!-- 01 -->
+                <article class="service-card service-card-yellow">
+                    <div class="service-card-image">
+                        <img src="{{ url_for('static', filename='images/programs/nep20.png') }}" alt="NEP Implementation — policy alignment and classroom innovation">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>NEP Implementation</h3>
+                        <p>
+                            Supporting schools with policy alignment,
+                            teacher enablement and classroom innovation.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 02 -->
+                <article class="service-card service-card-pink">
+                    <div class="service-card-image">
+                        <img src="{{ url_for('static', filename='images/slideimage/image18.jpeg') }}"
+                            alt="STEM Innovation Workshops — AI, robotics, aeromodelling">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>STEM Innovation Workshops</h3>
+                        <p>
+                            Hands-on learning experiences across AI,
+                            robotics, coding, aeromodelling,
+                            space technology and AgriTech.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 03 -->
+                <article class="service-card service-card-blue">
+                    <div class="service-card-image">
+                        <img src="{{ url_for('static', filename='images/ai-coding.jfif') }}"
+                            alt="Teacher Training Programs — digital pedagogy and NEP skills">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Teacher Training Programs</h3>
+                        <p>
+                            Equipping educators with practical digital
+                            pedagogy, emerging technology skills and
+                            NEP-aligned teaching approaches.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 04 -->
+                <article class="service-card service-card-orange">
+                    <div class="service-card-image">
+                        <img src="{{ url_for('static', filename='images/slideimage/image12.jpeg') }}" alt="School Digitalization — digital systems for schools">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>School Digitalization</h3>
+                        <p>
+                            Helping schools adopt practical digital
+                            systems for communication, administration
+                            and technology-enabled learning.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 05 -->
+                <article class="service-card service-card-purple">
+                    <div class="service-card-image">
+                        <img src="{{ url_for('static', filename='images/hero/startindia.png') }}"
+                            alt="Future-Ready Innovation — technology solutions for education">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Future-Ready Innovation</h3>
+                        <p>
+                            Developing technology-driven solutions
+                            that help teachers and schools prepare
+                            for the future of education.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+            <!-- Scroll navigation arrows -->
+            <button class="services-scroll-btn services-scroll-prev" aria-label="Scroll services left" id="servScrollPrev">&#8592;</button>
+            <button class="services-scroll-btn services-scroll-next" aria-label="Scroll services right" id="servScrollNext">&#8594;</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     WORK VISUAL GRID
+     ===================================== -->
+
+
+
+
+
+
+
+<!-- =========================================
+     UNIQUE STRENGTHS
+     ========================================= -->
+
+<section class="strengths-section" id="strengths">
+
+    <div class="container-custom">
+
+        <div class="strengths-header">
+
+            <div>
+                <div class="section-label">
+                    WHY WE ARE DIFFERENT
+                </div>
+
+                <h2 class="strengths-title">
+                    Built for real-world
+                    education.
+                </h2>
+            </div>
+
+            <p class="strengths-intro">
+                Gati Shiksha combines practical STEM learning,
+                educator enablement and technology to create
+                meaningful learning experiences.
+            </p>
+
+        </div>
+
+
+        <div class="strengths-grid">
+
+            <!-- 01 -->
+
+            <article class="strength-card">
+
+                <div class="strength-number">
+                    01
+                </div>
+
+                <h3>
+                    Built for Bharat
+                </h3>
+
+                <p>
+                    Designed for schools across rural,
+                    Tier 2 and Tier 3 regions where
+                    meaningful exposure to technology
+                    can create the greatest impact.
+                </p>
+
+            </article>
+
+
+            <!-- 02 -->
+
+            <article class="strength-card">
+
+                <div class="strength-number">
+                    02
+                </div>
+
+                <h3>
+                    Real STEM Learning
+                </h3>
+
+                <p>
+                    Students learn through hands-on
+                    experiences in AI, robotics, coding,
+                    aerospace, space technology and
+                    AgriTech.
+                </p>
+
+            </article>
+
+
+            <!-- 03 -->
+
+            <article class="strength-card">
+
+                <div class="strength-number">
+                    03
+                </div>
+
+                <h3>
+                    Teacher-Led Model
+                </h3>
+
+                <p>
+                    We empower educators with practical
+                    tools, training and technology rather
+                    than relying only on lecture-based
+                    learning.
+                </p>
+
+            </article>
+
+
+            <!-- 04 -->
+
+            <article class="strength-card">
+
+                <div class="strength-number">
+                    04
+                </div>
+
+                <h3>
+                    Academic Expertise
+                </h3>
+
+                <p>
+                    Our approach brings together academic
+                    knowledge and practical understanding
+                    of innovation and education.
+                </p>
+
+            </article>
+
+
+            <!-- 05 -->
+
+            <article class="strength-card">
+
+                <div class="strength-number">
+                    05
+                </div>
+
+                <h3>
+                    High-Impact Delivery
+                </h3>
+
+                <p>
+                    Programs are designed to be practical,
+                    scalable and focused on visible
+                    learning outcomes.
+                </p>
+
+            </article>
+
+
+            <!-- 06 -->
+
+            <article class="strength-card">
+
+                <div class="strength-number">
+                    06
+                </div>
+
+                <h3>
+                    Policy into Practice
+                </h3>
+
+                <p>
+                    We translate education policy and
+                    future-skills objectives into practical
+                    classroom and school-level experiences.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- IMAGE SLIDESHOW -->
+<section class="image-slideshow-section">
+
+    <div class="image-slideshow">
+
+        <div class="slideshow-track">
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image2.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image3.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image4.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image5.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image6.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image7.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image8.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image9.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image10.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image11.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image12.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image13.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image14.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image15.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image16.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image17.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image18.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image19.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+            <div class="slide">
+                <img src="{{ url_for('static', filename='images/slideimage/image20.jpeg') }}" alt="Gati Shiksha">
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+             PRESS ROW — Redesigned credibility section
+             ===================================== -->
+
+<div class="container-custom">
+
+    <div class="opening-press">
+
+        <div class="press-label">
+            <span class="meta-label">FEATURED IN</span>
+            <span class="press-title">National Media</span>
+        </div>
+
+        <div class="press-cards">
+
+            <!-- Dainik Jagran -->
+            <a class="press-card" aria-label="Read Dainik Jagran article about Gati Shiksha aeromodelling workshop" target="_blank" rel="noopener noreferrer">
+                <div class="press-card-pub">
+                    <span class="press-pub-name">Dainik Jagran</span>
+                    <span class="press-pub-date">27 Jun 2025</span>
+                </div>
+                <p class="press-card-headline">छात्रों ने एयरोमॉडलिंग वर्कशॉप में उड़ाए विमान — केन्द्रीय विद्यालय, सलेमपुर</p>
+                <!-- <span class="press-read-link">Read Article &#8599;</span> -->
+            </a>
+
+            <!-- Dainik Bhaskar -->
+            <a class="press-card" aria-label="Read Dainik Bhaskar article about Gati Shiksha STEM workshop" target="_blank" rel="noopener noreferrer">
+                <div class="press-card-pub">
+                    <span class="press-pub-name">Dainik Bhaskar</span>
+                    <span class="press-pub-date">27 Jun 2025</span>
+                </div>
+                <p class="press-card-headline">गति शिक्षा ने Deoria में नई STEM क्रांति की शुरुआत की — KV Salempur में ऐतिहासिक कार्यशाला</p>
+                <!-- <span class="press-read-link">Read Article &#8599;</span> -->
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     ADVISORY MENTORS
+     ========================================= -->
+
+<section class="section mentors-section" id="mentors">
+
+    <div class="container-custom">
+
+        <div class="mentors-header">
+
+            <div>
+
+                <div class="section-label">
+                    ADVISORY NETWORK
+                </div>
+
+                <h2 class="section-title">
+                    Guidance from
+                    experienced minds.
+                </h2>
+
+                <p class="mentors-intro">
+                    Gati Shiksha is supported by expertise across
+                    education, academia, science and technology,
+                    helping us build relevant and practical learning
+                    experiences.
+                </p>
+
+            </div>
+
+
+            <div class="mentors-guidance-image">
+
+                <img src="{{ url_for('static', filename='images/mentors/guidance.png') }}"
+                    alt="Guidance from experienced minds">
+
+            </div>
+
+        </div>
+
+
+        <div class="mentor-grid">
+
+            {% for mentor in mentors %}
+
+            <article class="mentor-card">
+
+                <div class="mentor-image-wrapper">
+                    {% if mentor.image %}
+                    <img src="{{ url_for('static', filename=mentor.image) }}" alt="Portrait of {{ mentor.name }}"
+                        loading="lazy">
+                    {% else %}
+                    <span aria-hidden="true"></span>
+                    {% endif %}
+                </div>
+
+                <div class="mentor-content">
+                    <h4>{{ mentor.name }}</h4>
+                    <div class="mentor-role">{{ mentor.role }}</div>
+                    {% if mentor.organization %}
+                    <p>{{ mentor.organization }}</p>
+                    {% endif %}
+                </div>
+
+            </article>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PROGRAMS & SOLUTIONS
+     ========================================= -->
+
+<section class="section work-section" id="programs">
+
+    <div class="container-custom">
+
+        <!-- Section Header -->
+
+        <div class="work-header">
+
+            <div>
+
+                <div class="section-label">
+                    PROGRAMS & SOLUTIONS
+                </div>
+
+                <h2 class="section-title">
+                    Programs designed
+                    for hands-on learning.
+                </h2>
+
+            </div>
+
+
+            <p class="work-intro">
+
+                Practical programs that connect learners
+                with emerging technologies, real projects
+                and future-ready skills.
+
+            </p>
+
+        </div>
+
+
+        <!-- =====================================
+             DYNAMIC PROGRAM LIST
+             ===================================== -->
+
+        <div class="work-list">
+
+            {% for program in programs %}
+
+            <a href="{{ url_for('program_detail', program_id=program.id) }}" class="work-item program-link">
+
+                <!-- Number -->
+
+                <div class="work-number">
+
+                    {{ "%02d" | format(loop.index) }}
+
+                </div>
+
+
+                <!-- Program Content -->
+
+                <div class="work-content">
+
+                    <div class="section-label">
+
+                        {{ program.category }}
+
+                    </div>
+
+
+                    <h3>
+
+                        {{ program.title }}
+
+                    </h3>
+
+
+                    <p>
+
+                        {{ program.description }}
+
+                    </p>
+
+
+                    {% if program.duration %}
+
+                    <p class="mt-3">
+
+                        <strong>
+                            Duration:
+                        </strong>
+
+                        {{ program.duration }}
+
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+
+                <!-- Program Visual -->
+
+                <div class="work-placeholder">
+
+                    {% if program.image %}
+
+                    <img src="{{ url_for('static', filename='images/programs/' + program.image) }}"
+                        alt="{{ program.title }}" loading="lazy">
+
+                    {% else %}
+
+                    <span>
+                        {{ program.category }}
+                    </span>
+
+                    {% endif %}
+
+                </div>
+
+                <!-- Shown if database contains no programs -->
+
+            </a>
+
+
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     ABOUT GATI SHIKSHA (WITH IMPACT)
+     ========================================= -->
+
+<section class="section about-section" id="about">
+    <div class="container-custom">
+        <!-- New Centered Header -->
+        <div class="about-section-header">
+            <h2 class="about-main-heading">ABOUT GATI SHIKSHA</h2>
+            <div class="about-heading-divider"></div>
+        </div>
+
+        <div class="about-two-column">
+            
+            <!-- Left Side: About Content -->
+            <div class="about-content-left">
+                <div class="about-header">
+                    <h3 class="about-welcome-title">Welcome to Gati Shiksha</h3>
+                </div>
+                
+                <div class="about-quote">
+                    <p>
+                        "Gati Shiksha is a revolution in the making — born from the soil of Bharat, 
+                        shaped by the dreams of its children, and powered by the urgency of change. 
+                        We are not a startup with a pitch deck. We are a mission with a pulse. 
+                        In every remote school, every under-equipped classroom, every teacher who 
+                        wants to do more — Gati Shiksha sees a spark waiting to be ignited."
+                    </p>
+                </div>
+
+                <div class="mission-vision-container">
+                    <div class="mv-tabs">
+                        <button class="mv-tab-btn active" data-tab="mission">OUR MISSION</button>
+                        <button class="mv-tab-btn" data-tab="vision">OUR VISION</button>
+                    </div>
+                    <div class="mv-content-container">
+                        <div class="mv-panel active" id="panel-mission">
+                            <p>To empower students and educators across Bharat by making practical STEM education, emerging technologies, and future-ready skills accessible and meaningful for every classroom.</p>
+                        </div>
+                        <div class="mv-panel" id="panel-vision">
+                            <p>A future where every child, regardless of geography, has the tools and exposure to become an innovator, shaping the technological landscape of tomorrow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Impact Stats -->
+            <div class="about-impact-right">
+                <div class="impact-grid">
+                    {% for metric in metrics %}
+                    <article class="impact-item">
+                        <div class="impact-card-header">
+                            <span class="impact-number">{{ "%02d"|format(loop.index) }}</span>
+                            <span class="impact-dot"></span>
+                        </div>
+                        <div class="impact-content">
+                            <div class="impact-value">{{ metric.value }}</div>
+                            <h3 class="impact-label">{{ metric.label }}</h3>
+                            {% if metric.description %}
+                            <p class="impact-description">{{ metric.description }}</p>
+                            {% endif %}
+                        </div>
+                    </article>
+                    {% else %}
+                    <div class="impact-empty">Impact metrics will be available soon.</div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     FOUNDERS
+     ========================================= -->
+
+<section class="section leadership-section" id="founders">
+
+    <div class="container-custom">
+
+        <!-- Leaders -->
+
+        <div class="leader-list">
+
+            {% for leader in leaders if leader.role != "Co-Founder & COO" %}
+
+            <article class="leader-item">
+
+                <div class="leader-number">
+                    {{ "%02d"|format(loop.index) }}
+                </div>
+
+
+                <div class="leader-content">
+
+                    <h3>
+                        {{ leader.name }}
+                    </h3>
+
+                    <div class="leader-role">
+                        {{ leader.role }}
+                    </div>
+
+                    {% if leader.description %}
+
+                    <p>
+                        {{ leader.description }}
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+
+                <div class="leader-placeholder">
+                    <img src="{{ url_for('static', filename='images/founders/swetank sir .png') }}"
+                        alt="Swetank Tripathi" loading="lazy">
+                </div>
+
+            </article>
+
+            {% else %}
+
+            <p class="leadership-empty">
+                Leadership information will be available soon.
+            </p>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     CONTACT / INQUIRY
+     ========================================= -->
+
+<section class="section contact-section" id="contact">
+
+    <div class="container-custom">
+
+        <!-- CONTACT HEADER — two column: heading | image -->
+
+        <div class="contact-header">
+
+            <!-- Left: label + heading -->
+            <div class="contact-header-text">
+
+                <div class="section-label contact-eyebrow">
+                    GET IN TOUCH
+                </div>
+
+                <h2 class="section-title">
+                    Let's build better
+                    learning experiences.
+                </h2>
+
+            </div>
+
+            <!-- Right: contact image -->
+            <div class="contact-image-wrap">
+                <img
+                    src="{{ url_for('static', filename='images/media/contact-education.jpg') }}"
+                    alt="Contact Gati Shiksha — STEM education and innovation"
+                    class="contact-image"
+                    loading="lazy"
+                >
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT LAYOUT -->
+
+        <div class="contact-layout">
+
+
+            <!-- =====================================
+                 LEFT: info items + image
+                 ===================================== -->
+
+            <div class="contact-info">
+
+                <div class="contact-info-item">
+
+                    <span class="meta-label">
+                        WHO WE WORK WITH
+                    </span>
+
+                    <p>
+                        Schools, government initiatives,
+                        CSR organisations and education
+                        partners.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-info-item">
+
+                    <span class="meta-label">
+                        ENQUIRIES
+                    </span>
+
+                    <p>
+                        Programs · Workshops ·
+                        Partnerships · Teacher Training
+                    </p>
+
+                </div>
+
+
+                <div class="contact-info-item">
+
+                    <span class="meta-label">
+                        START A CONVERSATION
+                    </span>
+
+                    <p>
+                        Tell us what you're trying to build,
+                        improve or bring to your learners.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- =====================================
+                 RIGHT: intro + inquiry form
+                 ===================================== -->
+
+            <div class="contact-form-col">
+
+                <p class="contact-intro">
+                    Interested in bringing STEM, technology and
+                    experiential learning to your school,
+                    organisation or community?
+                </p>
+
+            <!-- Success message (shown after submission via flash) -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="form-success-banner" role="alert">
+                <span class="form-success-icon" aria-hidden="true">✓</span>
+                {% for category, message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+
+            <form class="inquiry-form" action="{{ url_for('submit_inquiry') }}" method="POST" id="inquiryForm" novalidate>
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                <!-- =================================
+                     INTERESTED PROGRAM
+                     ================================= -->
+
+                <!-- {% if selected_program %}
+                <div class="form-group form-message">
+                    <label for="program">Interested In</label>
+                    <input type="text" id="program" name="program"
+                        value="{{ programs | selectattr('id', 'equalto', selected_program | int) | map(attribute='title') | first }}"
+                        readonly aria-readonly="true">
+                </div>
+                {% endif %} -->
+
+
+                <!-- =================================
+                     NAME
+                     ================================= -->
+
+                <div class="form-group">
+                    <label for="name">
+                        Full Name <span class="required-star" aria-label="required">*</span>
+                    </label>
+                    <input type="text" id="name" name="name"
+                        placeholder="Your full name"
+                        required
+                        aria-required="true"
+                        aria-describedby="name-error">
+                    <span class="field-error" id="name-error" role="alert" aria-live="polite"></span>
+                </div>
+
+
+                <!-- =================================
+                     EMAIL
+                     ================================= -->
+
+                <div class="form-group">
+                    <label for="email">
+                        Email Address <span class="required-star" aria-label="required">*</span>
+                    </label>
+                    <input type="email" id="email" name="email"
+                        placeholder="you@example.com"
+                        required
+                        aria-required="true"
+                        aria-describedby="email-error">
+                    <span class="field-error" id="email-error" role="alert" aria-live="polite"></span>
+                </div>
+
+
+                <!-- =================================
+                     ORGANISATION
+                     ================================= -->
+
+                <div class="form-group">
+                    <label for="organisation">School / Organisation</label>
+                    <input type="text" id="organisation" name="organisation"
+                        placeholder="e.g. KV Salempur, Deoria"
+                        aria-describedby="org-hint">
+                    <span class="field-hint" id="org-hint">Optional — helps us personalise our response</span>
+                </div>
+
+
+                <!-- =================================
+                     ROLE
+                     ================================= -->
+
+                <div class="form-group">
+                    <label for="role">
+                        I represent <span class="required-star" aria-label="required">*</span>
+                    </label>
+                    <select id="role" name="role"
+                        required
+                        aria-required="true"
+                        aria-describedby="role-error">
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="School Administrator">School Administrator / Principal</option>
+                        <option value="Parent">Parent</option>
+                        <option value="CSR/Partner Organization">CSR / Partner Organization</option>
+                        <option value="Government/Policy">Government / Policy / Samagra Shiksha</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span class="field-error" id="role-error" role="alert" aria-live="polite"></span>
+                </div>
+
+
+                <!-- =================================
+                     MESSAGE
+                     ================================= -->
+
+                <div class="form-group form-message">
+                    <label for="message">
+                        Your Message <span class="required-star" aria-label="required">*</span>
+                    </label>
+                    <textarea id="message" name="message" rows="6"
+                        placeholder="Tell us what you're trying to build, improve or bring to your learners..."
+                        required
+                        aria-required="true"
+                        aria-describedby="message-error"></textarea>
+                    <span class="field-error" id="message-error" role="alert" aria-live="polite"></span>
+                </div>
+
+
+                <!-- =================================
+                     CAPTCHA
+                     ================================= -->
+                {% if turnstile_site_key %}
+                <div class="form-group">
+                    <div class="cf-turnstile" data-sitekey="{{ turnstile_site_key }}" data-theme="light"></div>
+                    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+                </div>
+                {% endif %}
+
+                <!-- =================================
+                     SUBMIT BUTTON
+                     ================================= -->
+
+                <button type="submit" class="inquiry-submit" id="inquirySubmit" aria-label="Send your inquiry to Gati Shiksha">
+                    Send Inquiry
+                    <span aria-hidden="true">→</span>
+                </button>
+
+            </form>
+
+            </div><!-- /.contact-form-col -->
+
+        </div><!-- /.contact-layout -->
+
+    </div><!-- /.container-custom -->
+
+</section>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const list = document.getElementById("servicesList");
+        if (!list) return;
+
+        const originalCards = Array.from(list.children);
+        if (originalCards.length === 0) return;
+
+        // Clone all cards for seamless infinite looping on desktop and mobile
+        originalCards.forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.classList.add("is-clone");
+            list.appendChild(clone);
+        });
+
+        let currentIndex = 0;
+        let isSliding = false;
+        let slideTimer = null;
+
+        function getSlideStep() {
+            const firstCard = list.children[0];
+            if (!firstCard) return 0;
+            const gap = parseFloat(getComputedStyle(list).gap) || 18;
+            return firstCard.getBoundingClientRect().width + gap;
+        }
+
+        function goToSlide(index, animated = true) {
+            const step = getSlideStep();
+            const offset = -index * step;
+
+            if (animated) {
+                list.style.transition = "transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)";
+            } else {
+                list.style.transition = "none";
+            }
+            list.style.transform = `translateX(${offset}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            if (isSliding) return;
+            isSliding = true;
+
+            currentIndex++;
+            goToSlide(currentIndex, true);
+
+            if (currentIndex === originalCards.length) {
+                // Slid smoothly to clone at end. Now reset instantly to index 0.
+                setTimeout(() => {
+                    goToSlide(0, false);
+                    void list.offsetHeight;
+                    isSliding = false;
+                }, 600);
+            } else {
+                setTimeout(() => {
+                    isSliding = false;
+                }, 600);
+            }
+        }
+
+        function prevSlide() {
+            if (isSliding) return;
+            isSliding = true;
+
+            if (currentIndex === 0) {
+                // Move instantly to clone position, then slide back to last card
+                goToSlide(originalCards.length, false);
+                void list.offsetHeight;
+                currentIndex = originalCards.length - 1;
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        goToSlide(currentIndex, true);
+                        setTimeout(() => { isSliding = false; }, 600);
+                    });
+                });
+            } else {
+                currentIndex--;
+                goToSlide(currentIndex, true);
+                setTimeout(() => { isSliding = false; }, 600);
+            }
+        }
+
+        function startAutoSlide() {
+            stopAutoSlide();
+            slideTimer = setInterval(nextSlide, 3000);
+        }
+
+        function stopAutoSlide() {
+            if (slideTimer) clearInterval(slideTimer);
+        }
+
+        startAutoSlide();
+
+        // Pause auto-slide on hover removed as per requirements
+        // list.addEventListener("mouseenter", stopAutoSlide);
+        // list.addEventListener("mouseleave", startAutoSlide);
+
+        // Touch Swipe Gesture Handling for Mobile
+        let startX = 0;
+        let startY = 0;
+        let currentX = 0;
+        let currentY = 0;
+        let isSwiping = false;
+        let isHorizontal = false;
+
+        list.addEventListener("touchstart", function (e) {
+            if (e.touches.length !== 1) return;
+            stopAutoSlide();
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            currentX = startX;
+            currentY = startY;
+            isSwiping = true;
+            isHorizontal = false;
+        }, { passive: true });
+
+        list.addEventListener("touchmove", function (e) {
+            if (!isSwiping) return;
+            currentX = e.touches[0].clientX;
+            currentY = e.touches[0].clientY;
+
+            const diffX = Math.abs(currentX - startX);
+            const diffY = Math.abs(currentY - startY);
+
+            if (diffX > diffY && diffX > 10) {
+                isHorizontal = true;
+            }
+        }, { passive: true });
+
+        list.addEventListener("touchend", function () {
+            if (!isSwiping) return;
+            isSwiping = false;
+
+            if (isHorizontal) {
+                const diffX = currentX - startX;
+                const threshold = 40; // minimum swipe distance px
+
+                if (diffX < -threshold) {
+                    nextSlide();
+                } else if (diffX > threshold) {
+                    prevSlide();
+                }
+            }
+            startAutoSlide();
+        });
+
+        // Prev / Next button listeners
+        const prevBtn = document.getElementById("servScrollPrev");
+        const nextBtn = document.getElementById("servScrollNext");
+
+        if (prevBtn) {
+            prevBtn.addEventListener("click", function () {
+                stopAutoSlide();
+                prevSlide();
+                startAutoSlide();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener("click", function () {
+                stopAutoSlide();
+                nextSlide();
+                startAutoSlide();
+            });
+        }
+
+        // Recalculate layout offset on window resize
+        window.addEventListener("resize", function () {
+            goToSlide(currentIndex, false);
+        });
+    });
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const track = document.querySelector(".slideshow-track");
+
+    if (!track) return;
+
+    const originalSlides = Array.from(
+        track.querySelectorAll(".slide")
+    );
+
+    originalSlides.forEach(function (slide) {
+    const image = slide.querySelector("img");
+
+    if (image) {
+        slide.style.setProperty(
+            "--slide-background",
+            `url("${image.src}")`
+        );
+    }
+});
+
+    const totalSlides = originalSlides.length;
+
+    if (totalSlides === 0) return;
+
+
+    /* -----------------------------------------
+       Clone the first 3 images
+       for a smooth infinite loop
+    ----------------------------------------- */
+
+    originalSlides.slice(0, 3).forEach(function (slide) {
+        track.appendChild(slide.cloneNode(true));
+    });
+
+
+    let currentIndex = 0;
+    let isMoving = false;
+
+
+    function getMoveAmount() {
+
+        const slide = track.querySelector(".slide");
+
+        if (!slide) return 0;
+
+        const slideWidth = slide.getBoundingClientRect().width;
+
+        const gap = parseFloat(
+            getComputedStyle(track).gap
+        ) || 25;
+
+        return slideWidth + gap;
+    }
+
+
+    function moveSlideshow() {
+
+        if (isMoving) return;
+
+        isMoving = true;
+
+        const moveAmount = getMoveAmount();
+
+        currentIndex++;
+
+        track.style.transition = "transform 1.2s ease";
+        track.style.transform =
+            `translateX(-${currentIndex * moveAmount}px)`;
+
+
+        /*
+            When we reach the cloned images,
+            instantly return to the beginning.
+        */
+
+        if (currentIndex === totalSlides) {
+
+            setTimeout(function () {
+
+                track.style.transition = "none";
+                track.style.transform = "translateX(0)";
+
+                currentIndex = 0;
+
+                void track.offsetWidth;
+
+                isMoving = false;
+
+            }, 1200);
+
+        } else {
+
+            setTimeout(function () {
+                isMoving = false;
+            }, 1200);
+
+        }
+
+    }
+
+
+    /*
+        Move automatically every 4 seconds.
+
+        Cursor position does NOT stop it.
+        Scrolling does NOT stop it.
+    */
+
+    setInterval(moveSlideshow, 2500);
+
+
+});
+</script>
+
+
+<script>
+// =========================================
+// TESTIMONIALS — centralized data + carousel
+// =========================================
+// To update testimonials, edit ONLY this object.
+// Image paths live in: static/images/testimonials/
+
+(function () {
+
+    /* -----------------------------------------------
+       TESTIMONIAL DATA — edit names, roles, quotes
+       and image paths here, nowhere else.
+    ----------------------------------------------- */
+    const testimonials = [
+        {
+            image: "/static/images/testimonials/testimonial-1.jpg",
+            name:  "Ananya Sharma",
+            role:  "Parent | Delhi",
+            quote: "Gati Shiksha has helped my child become more curious, confident and excited about learning beyond the classroom."
+        },
+        {
+            image: "/static/images/testimonials/testimonial-2.jpg",
+            name:  "Rahul Verma",
+            role:  "School Coordinator | Jaipur",
+            quote: "The hands-on approach makes STEM concepts easier for students to understand, explore and apply in real situations."
+        },
+        {
+            image: "/static/images/testimonials/testimonial-3.jpg",
+            name:  "Priya Nair",
+            role:  "Science Educator | Bengaluru",
+            quote: "Gati Shiksha creates an environment where students are encouraged to ask questions, experiment and turn ideas into possibilities."
+        }
+    ];
+
+    /* -----------------------------------------------
+       CAROUSEL ENGINE
+    ----------------------------------------------- */
+    const track   = document.getElementById('testimonialsTrack');
+    const prevBtn = document.getElementById('testimonialsPrev');
+    const nextBtn = document.getElementById('testimonialsNext');
+
+    if (!track || !prevBtn || !nextBtn) return;
+
+    // Build card HTML
+    function buildCard(t) {
+        return `
+        <article class="testimonial-card">
+            <div class="testimonial-portrait-wrap">
+                <img
+                    src="${t.image}"
+                    alt="Portrait of ${t.name}"
+                    class="testimonial-portrait"
+                    loading="lazy"
+                    onerror="this.style.background='#e8f0ee';this.src=''"
+                >
+                <div class="testimonial-play-btn" aria-hidden="true" title="Testimonial visual indicator">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" aria-hidden="true">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </div>
+            </div>
+            <blockquote class="testimonial-quote">
+                <p>"${t.quote}"</p>
+            </blockquote>
+            <div class="testimonial-person">
+                <span class="testimonial-name">${t.name}</span>
+                <span class="testimonial-role">${t.role}</span>
+            </div>
+        </article>`;
+    }
+
+    track.innerHTML = testimonials.map(buildCard).join('');
+
+    // How many items are visible based on viewport
+    function visibleCount() {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 640)  return 2;
+        return 1;
+    }
+
+    let currentIndex = 0;
+    const total = testimonials.length;
+
+    function maxIndex() {
+        return Math.max(0, total - visibleCount());
+    }
+
+    function updateArrows() {
+        prevBtn.disabled = currentIndex <= 0;
+        nextBtn.disabled = currentIndex >= maxIndex();
+        prevBtn.setAttribute('aria-disabled', String(currentIndex <= 0));
+        nextBtn.setAttribute('aria-disabled', String(currentIndex >= maxIndex()));
+    }
+
+    function applySlide() {
+        const cards  = track.querySelectorAll('.testimonial-card');
+        const vc     = visibleCount();
+        const cardW  = cards[0] ? cards[0].getBoundingClientRect().width : 0;
+        const gap    = parseFloat(getComputedStyle(track).gap) || 32;
+        const offset = currentIndex * (cardW + gap);
+        track.style.transform = `translateX(-${offset}px)`;
+        updateArrows();
+    }
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) { currentIndex--; applySlide(); }
+    });
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < maxIndex()) { currentIndex++; applySlide(); }
+    });
+
+    // Keyboard support
+    [prevBtn, nextBtn].forEach(btn => {
+        btn.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+        });
+    });
+
+    // Recalculate on resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            currentIndex = Math.min(currentIndex, maxIndex());
+            applySlide();
+        }, 150);
+    });
+
+    // Initial render — wait for layout
+    setTimeout(applySlide, 100);
+
+})();
+</script>
+
+{% endblock %}
