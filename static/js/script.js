@@ -99,6 +99,15 @@ if (tabButtons.length > 0 && tabPanels.length > 0) {
             validate: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
             msg: 'Please enter a valid email address (e.g. you@school.in).'
         },
+        mobile: {
+            validate: v => {
+                let cleaned = v.replace(/[\s\-\(\)\+]/g, '');
+                if (cleaned.startsWith('91') && cleaned.length === 12) cleaned = cleaned.slice(2);
+                if (cleaned.startsWith('0') && cleaned.length === 11) cleaned = cleaned.slice(1);
+                return /^[6-9]\d{9}$/.test(cleaned);
+            },
+            msg: 'Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.'
+        },
         role: {
             validate: v => v !== '',
             msg: 'Please select your role so we can respond appropriately.'

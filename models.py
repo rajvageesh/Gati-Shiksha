@@ -176,6 +176,10 @@ class Inquiry(db.Model):
         nullable=False
     )
 
+    mobile = db.Column(
+        db.String(20)
+    )
+
     organisation = db.Column(
         db.String(200)
     )

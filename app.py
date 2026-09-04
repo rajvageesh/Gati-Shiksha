@@ -11,6 +11,7 @@ from models import (
     Inquiry
 )
 import os
+import re
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -212,6 +213,19 @@ def send_inquiry_email(inquiry):
 
                 <td>
                     {html.escape(inquiry.email or "")}
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Mobile Number
+                </td>
+
+                <td>
+                    {html.escape(inquiry.mobile or "Not provided")}
                 </td>
 
             </tr>
@@ -443,6 +457,7 @@ def submit_inquiry():
 
     name = request.form.get("name", "").strip()
     email = request.form.get("email", "").strip()
+    mobile = request.form.get("mobile", "").strip()
     organisation = request.form.get("organisation", "").strip()
     role = request.form.get("role", "").strip()
     message = request.form.get("message", "").strip()
@@ -478,11 +493,11 @@ def submit_inquiry():
     # BASIC VALIDATION & LENGTH LIMITS
     # =====================================
 
-    if not name or not email or not role or not message:
+    if not name or not email or not mobile or not role or not message:
         flash("Please fill in all required fields.", "error")
         return redirect(url_for("home") + "#contact")
 
-    if len(name) > 100 or len(email) > 254 or len(message) > 5000 or len(organisation) > 200 or len(role) > 150:
+    if len(name) > 100 or len(email) > 254 or len(mobile) > 30 or len(message) > 5000 or len(organisation) > 200 or len(role) > 150:
         logger.warning(f"Input length validation failed from {get_remote_address()}")
         flash("Input exceeds allowed length.", "error")
         return redirect(url_for("home") + "#contact")
@@ -492,6 +507,17 @@ def submit_inquiry():
         email = valid_email.email
     except EmailNotValidError as e:
         flash("Please enter a valid email address.", "error")
+        return redirect(url_for("home") + "#contact")
+
+    # Clean & validate mobile number (Indian 10-digit format starting with 6,7,8,9)
+    clean_mobile = re.sub(r'[\s\-\(\)\+]', '', mobile)
+    if clean_mobile.startswith('91') and len(clean_mobile) == 12:
+        clean_mobile = clean_mobile[2:]
+    elif clean_mobile.startswith('0') and len(clean_mobile) == 11:
+        clean_mobile = clean_mobile[1:]
+
+    if not re.match(r'^[6-9]\d{9}$', clean_mobile):
+        flash("Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.", "error")
         return redirect(url_for("home") + "#contact")
 
     # =====================================
@@ -529,6 +555,7 @@ def submit_inquiry():
     inquiry = Inquiry(
         name=html.escape(name),
         email=email,
+        mobile=html.escape(clean_mobile),
         organisation=html.escape(organisation),
         role=html.escape(role),
         message=html.escape(message),
