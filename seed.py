@@ -128,7 +128,7 @@ leaders = [
             "through STEM, technology and innovation."
         ),
 
-        "image": 'swetank sir.png'
+        "image": 'swetank-sir.png'
     },
 
   
